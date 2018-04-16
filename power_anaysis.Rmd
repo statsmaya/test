@@ -6,13 +6,13 @@ output: pdf_document
 
 ```{r cars}
 ## power analysis
-power.fun.n.needed<-function(OR,power,p0){
+power.fun.n.needed<-function(OR,power,p0,n){
     
     
         
         OR<-OR
         p0<-p0
-        n<-NA
+        n<-n
         power<-power
         r<-1
         design<-1
