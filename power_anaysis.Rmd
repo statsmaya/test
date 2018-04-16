@@ -1,0 +1,30 @@
+---
+title: "Untitled"
+output: pdf_document
+---
+
+
+```{r cars}
+## power analysis
+power.fun.n.needed<-function(OR,power,p0){
+    
+    
+        
+        OR<-OR
+        p0<-p0
+        n<-NA
+        power<-power
+        r<-1
+        design<-1
+        sided.test<-2
+        conf.level<-0.95
+        method<-"matched"
+        
+        calc<-epi.ccsize(OR = OR, p0 = p0, n = NA, power = power, r = r,
+                         design = 1, sided.test = sided.test, conf.level = conf.level, 
+                         method = method,fleiss = FALSE)
+        
+        calc$n.total
+}
+
+```
